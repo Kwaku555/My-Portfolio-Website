@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-<title>Emmanuel|Web dev</title> 
+    <meta name="author" content="Emmanuel Kwaku Abu Bonsra">
+    <title>Emmanuel|Web dev</title> 
 </head>
 <body>
     <header>
@@ -27,8 +25,14 @@
                     </ul>
                 </div>
             
-                   
+               <figure class="hamburger" id="hamburger">
+                    <button  class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                        &#9776;
+                    </button> 
+                    <figcaption style="font-size: 10px;"> Menu </figcaption>
+               </figure>    
         </nav>
+        
        
         </header>
     
@@ -249,10 +253,11 @@
             
             </section>
         
-            <section>
-                <div>
+            <section >
+                <div class="contact_form_section">
                     <h2 id="contact"> Get In Touch</h2>
                         <div class="contact_form">
+                            
                             <form action="/api/formsubmit" method="post">
                                 <label for="full_name">Full Name</label> <br>
                                 <input type="text" name="full_name" id="full_name" required> <br>
@@ -261,7 +266,7 @@
                                 <input type="email" name="email" id="email" required> <br>
             
                                 <label for="message">Leave Your Message Here</label> <br>
-                                <textarea name="message_area" id="message" cols="51" rows="10"> </textarea> <br>
+                                <textarea name="message_area" id="message" cols="15" rows="10"> </textarea> <br>
             
                                 <button type="submit" class="btn btn-secondary"> Submit</button>
                             </form>
@@ -278,21 +283,21 @@
         <!-- <hr> -->
 
         <footer class="footer-container">
-            <div>
+            <div class="footer-design1">
                 <h4>Design </h4>
                 <a href="https://catalinonutu.com/" target="_blank">Inspired By Catalin Onutu</a>
             </div>
             
 
-            <div>
+            <div class="footer-mission1">
                 <h4>Mission</h4> 
-                <p>writing code that change Live <br> and gives hope to Mankind</p>
+                <p>writing code that <br> change  Live  and  <br>gives  hope to Mankind</p>
             </div>
             
 
-            <div>
-                <h4>Social Media</h4>
+                
                 <div class="socialmedia-container">
+                    <h4>Social Media</h4>
                     <ul >
                         <li> <a href="https://wa.me/+971581522663"><img src="images/logo-whatsapp.svg" width="20" alt="whatsapp logo for contact"></a> </li>
                         <li><a href="https://emmanuel7185@gmail.com"><img src="images/mail-open-outline.svg" width="20" alt="email logo for email contact"></a></li> <br>
@@ -300,28 +305,28 @@
                         <li><a href="https://join.skype.com/invite/H1Ngtdb5cAaI"><img src="images/logo-skype.svg" width="20" alt="skype icon for skype contact"></a></li>
                     </ul>
                 </div>
-            </div>
             
-        <div>
+        <div class="footer-address1">
             <h4>Address</h4>
             <p>
                 16th street <br>
                 Mussafah,Abu Dhabi <br>
                 United Arab Emirite
-            </p>
-            
-            
+            </p>    
         </div>
+
+        <div class="footer-copyright">
+            © Copyright
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            . Made by Emmanuel Kwaku
+          </div>
         
         
         </footer>
 
-        
-           
-
-        
-            
-
-    
+        <script src="script.js" text="text/javascript"></script>
+ 
 </body>
 </html>
