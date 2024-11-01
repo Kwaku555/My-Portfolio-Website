@@ -61,23 +61,19 @@ body {
     /* margin: 0.2rem;  */
     font-family: "Poppins" , sans-serif;
     color: black;
-
-    
-    
+    background-color: #21252920;
     
 }
 
 h1,h2,h3,h4 {
     font-weight: 700;
-    /* line-height: 1.2; */
+    line-height: 1.2;
     letter-spacing: -2px;
-    
-    
     
 }
 
 h1 {
-    font-size: 62px;
+    font-size: 3rem;
     text-align: center;
 }
 
@@ -126,11 +122,8 @@ header {
    
     position: sticky;
     top: 0;
-    /* the nav bar need adjestment . when you minimix it does not respond  */
-    /* UPDATE ; i've set flex-wrap on menu2 container and it working still
-    need to check if it's responsive and better practice */
-
     padding: 1.2rem;
+    background-color: white;
   
 
 }
@@ -155,22 +148,31 @@ img {
 }
 
 
-.menu2 {
-    display:inline-block;
-    width: 100%;
-    
-}
+
+.menu2 { 
+    width: 100%; 
+
+} 
 
 .menu1 {
-     display: flex;
+    display: flex;
     justify-content: flex-end; 
     flex-wrap: wrap;
     padding: 0;
     text-decoration: none;
     list-style: none;
-    margin: 0; 
-    
+    margin: 0;     
 } 
+
+.nav-btn {
+    font-size: 1.5rem;
+    padding: 0 0.6rem 0 0.6rem;
+    color: #9775fa;
+}
+
+.nav-btn:hover {
+    color: #9675fa85;
+}
 
 .hamburger {
     display: none;
@@ -186,7 +188,7 @@ img {
         flex-direction: column;
         position: absolute;
         top: 60px;
-        right: 20px;
+        right: 0;
         /* background-color: #f8f9fa; */
         width: 150px;
         box-sizing: 0 4px 8px rgba(0,0,0,0,0.1);
@@ -195,8 +197,13 @@ img {
 
     .menu1.active {
         display: flex;
-       
+        background-color: white;
+        width: 100%;
+        place-content: end;
+
     }
+
+   
 
     .hamburger {
         display: block;
@@ -207,16 +214,18 @@ img {
 .span1 {
     background-color: #9775fa;
     color: white;
+    border-radius: 4px;
+    padding: 0.7rem;
 }
 
 
-.hero-section {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    padding: 1rem;
-    margin-bottom: 100px;
-    
+ .hero-section {
+    margin: 1rem;
+    min-height: 60vh;      
+} 
+
+#about {
+    margin-bottom: 70px;
 }
 
 
@@ -228,8 +237,9 @@ img {
     "cs1 cs1 cs1 cs1 cs1 cs2s cs2s cs2s cs2s";
     column-gap: 1.5rem;
     background-color: #f5f5f5;
-     /* margin: 10px 0 60px 0; */
+    margin: 0.8rem;
     padding: 60px 5px 60px 15px; 
+    border-radius: 15px;
     
 }
 
@@ -247,6 +257,14 @@ img {
     }
 }
 
+@media (max-width:295px) {
+ .conbined-section {
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 100%;
+ }
+}
+
 .conbined-section1 {
     display: grid;
     grid-auto-flow: row;
@@ -259,30 +277,18 @@ img {
 .conbined-section2-sidebar {
     display: grid;
     grid-area: cs2s;
-    /* grid-auto-flow: row; */
-    /* grid-auto-columns: repeat(auto-fit); */
-    /* margin-left: 40px; */
-    /* place-content: center; */
     margin: 0;
-    /* padding: 1rem; */
-    /* overflow: auto; */
     padding: 0;
 }
 
 
 .bulet {
     list-style: none;
-    /* line-height: 1.5; */
     font-size: 16px;
     list-style-position: inside;
-    /* text-align:justify; */
     display: grid;
     grid-template-columns: repeat(auto-fit,100px);
-    /* grid-auto-columns:; */
-    /* grid-auto-flow: row; */
     gap: 0.5rem;
-    /* place-content: center; */
-    /* overflow: auto; */
     
     
 }  
@@ -300,24 +306,26 @@ img {
     margin: 0;
 
 }
+
+
  
 .work-exp {
+    display: inline-block;
     list-style: none;
     margin: 1rem;
     padding: 0;
-    width: 100%;
-    
-    /* flex-direction: column; */
-    overflow: auto;
     
 }
 
- .work-exp li {
-    margin: 0;
-    overflow: auto;
-    display: flex;
-    flex-wrap: wrap;
-} 
+/*  update the width on the media query if the size of the content increase beacause i've use the size of the content to set the horizontal scroll bar instead of screen size  */
+@media (max-width:450px) {
+    .section_work {
+        overflow-x: auto;
+        white-space: nowrap;
+        max-width: 100%;    
+    }
+}
+
 
 .discription1 {
     padding: 0;
@@ -326,12 +334,6 @@ img {
 
 }
 
-.section_work {
-    margin: 3rem 0.5rem 3rem 0.5rem;
-}
-
-/*  
-i was trying to make all the list items start on same point */
 
 ol {
     list-style-type: none;
@@ -347,8 +349,6 @@ ol {
     grid-template-areas:
      "fd fm sc fa"
      "fc fc fc fc";
-    justify-items: start;
-    align-items: start;
     width: 100%;
     background-color: #495057;
     color: whitesmoke;
@@ -357,48 +357,49 @@ ol {
     padding-top: 2rem;
  }
 
+ .footer-container h4 {
+    color: black;
+ }
+
 .socialmedia-container li {
     display: inline-block;
     margin: 5px;
-    padding: 0;
-    
+    padding: 0;    
    
 }
 
 .footer-design1 {
     display: grid;
     grid-area: fd;
-  
-
+    place-content: center;
 }
 
 .footer-mission1 {
     display: grid;
     grid-area: fm;
-    /* max-width: 15ch; */
-    
+    place-content: center;   
 }
-
 .socialmedia-container {
     display: grid;
     grid-area: sc;
-   
+    place-content: center;
 }
 
 .footer-address1 {
     display: grid;
     grid-area: fa;
+    place-content: center;
     
 }
 
 .footer-copyright {
-    display: grid;
     grid-area: fc;
     font-size: 12px;
     place-content: center;
     border-top: 1px solid black;
     width: 100%;
     padding-top: 1rem;
+    text-align: center;
 }
 
 @media (max-width:768px) {
@@ -419,25 +420,6 @@ ol {
     }
 }
 
-
-
-/* .menu1 li:hover , a:active {
-    background-color: steelblue;
-    color: steelblue;
-} */
-/* .menu1 li:focus {
-    color: white;
-}
-
-a:visited {
-    color: hsla(240, 100%, 50%, 0.137); 
-}
-*/
-/* 
-.menu1:active {
-    background-color: no Even darker background when clicked 
-    transform: translateY(2px); Slightly moves the button down
-} */
 
 
 
@@ -465,6 +447,7 @@ table,tr,th,td {
     
     font-size: 1rem;
     background-color: whitesmoke;
+    margin-bottom: 50px;
     
 }
 
@@ -504,6 +487,10 @@ button {
     background-color:#9775fa;
 }
 
+.project-section {
+    margin: 100px 0 100px 0;
+}
+
 .float-right {
     float: right;
     display: flow-root;
@@ -515,6 +502,7 @@ button {
     margin-right: 2rem;
     padding: 2rem;
 }  
+
 
 .btn  {
     display: inline-block;
@@ -550,8 +538,4 @@ button {
 
 .btn-secondary:active {
     transform: translateY(2px);
-}
-
-.skill-list {
-    background-color: whitesmoke;
 }
