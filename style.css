@@ -182,7 +182,7 @@ img {
     cursor: pointer;
 }
 
-@media (max-width:414px) {
+@media (max-width:550px) {
     .menu1 {
         display: none;
         flex-direction: column;
@@ -200,6 +200,7 @@ img {
         background-color: white;
         width: 100%;
         place-content: end;
+        margin-top: 12px;
 
     }
 
@@ -207,8 +208,18 @@ img {
 
     .hamburger {
         display: block;
-        background-color: white;
+        font-size: 20px; 
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+        padding: 0 10px 0 10px;
+        background-color: whitesmoke;
+        border-radius: 20%;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, .1), 0px 8px 16px rgba(0, 0, 0, .1);
+        
+
     }
+
+   
 }
 
 .span1 {
@@ -224,6 +235,12 @@ img {
     min-height: 60vh;      
 } 
 
+.hero-section p {
+    padding: 2rem;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
 #about {
     margin-bottom: 70px;
 }
@@ -238,7 +255,7 @@ img {
     column-gap: 1.5rem;
     background-color: #f5f5f5;
     margin: 0.8rem;
-    padding: 60px 5px 60px 15px; 
+    padding: 90px 5px 90px 15px; 
     border-radius: 15px;
     
 }
@@ -270,6 +287,7 @@ img {
     grid-auto-flow: row;
     grid-area: cs1;
     margin-right: 30px;
+    padding-left: 10px;
 
 
 }
@@ -307,7 +325,10 @@ img {
 
 }
 
-
+.section_work {
+    margin: 50px 1rem 50px 1rem;
+    
+}
  
 .work-exp {
     display: inline-block;
@@ -318,7 +339,7 @@ img {
 }
 
 /*  update the width on the media query if the size of the content increase beacause i've use the size of the content to set the horizontal scroll bar instead of screen size  */
-@media (max-width:450px) {
+@media (max-width:558px) {
     .section_work {
         overflow-x: auto;
         white-space: nowrap;
@@ -438,17 +459,15 @@ table,tr,th,td {
     display: grid;
     grid-template-columns: 1fr ;
     background-color: whitesmoke;
-    
     border: 2px solid #ccc;
     border-radius: 10px;
-    
     max-width: 600px;
     margin: 0 auto;
-    
     font-size: 1rem;
     background-color: whitesmoke;
     margin-bottom: 50px;
-    
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, .1), 0px 8px 16px rgba(0, 0, 0, .1);
+
 }
 
 .contact_form {
@@ -474,7 +493,9 @@ table,tr,th,td {
 #contact {
     padding: 2rem;
     background-color: whitesmoke;
-    background-image: url(images/backgroundImage-contactUs1.jpg);
+    background-image: url(images/contactUsBackgroundimage1.jpg);
+    background-repeat: repeat;
+    background-size: cover;
     border-radius: 8px 8px 0 0;
 }
 
