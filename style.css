@@ -147,6 +147,15 @@ img {
    
 }
 
+.name1 {
+    font-weight: 700;
+    margin-left: 8px;
+    padding: 0.9rem 0 0 0.7rem;
+    white-space: nowrap;
+
+
+}
+
 
 
 .menu2 { 
@@ -182,7 +191,7 @@ img {
     cursor: pointer;
 }
 
-@media (max-width:550px) {
+@media (max-width:600px) {
     .menu1 {
         display: none;
         flex-direction: column;
