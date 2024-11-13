@@ -54,12 +54,11 @@
 
 html {
     scroll-behavior:smooth;
-    scroll-padding-top: 12rem;
+    scroll-padding-top: 11rem;
    
 }
 
 body {
-    /* margin: 0.2rem;  */
     font-family: "Poppins" , sans-serif;
     color: black;
     background-color: #21252920;
@@ -114,8 +113,8 @@ a {
 
 header {
     height:70vh;
-    position: sticky;
-    top: 0;
+    /* position: sticky;
+    top: 0; */
 
 }
 
@@ -515,9 +514,7 @@ input , label , textarea {
     resize: none;
 } 
 
-button {
-    background-color:#9775fa;
-}
+
 
 .project-section {
     margin: 100px 0 100px 0;
@@ -535,6 +532,10 @@ button {
     padding: 2rem;
 }  
 
+button {
+    background-color:#9775fa;
+}
+
 
 .btn  {
     display: inline-block;
@@ -548,7 +549,7 @@ button {
     list-style: none;
 }
 
-.btn-primary:link , .btn-primary:visited {
+/* .btn-primary:any-link {
     background-color: #339af0;
 }
 
@@ -560,7 +561,7 @@ button {
     transform: translateY(3px);
 }
 
-.btn-secondary:link , .btn-secondary:visited {
+.btn-secondary:any-link {
     background-color:#9775fa;
 }
 
@@ -570,8 +571,29 @@ button {
 
 .btn-secondary:active {
     transform: translateY(2px);
+} */
+
+
+.btn-primary {
+    background-color: #339af0;
 }
 
+.btn-primary:hover {
+    background-color: #1c7ed6;
+}
 
+.btn-primary:active {
+    transform: translateY(3px);
+}
 
+.btn-secondary {
+    background-color: #9775fa;
+}
 
+.btn-secondary:hover {
+    background-color: #7048e8;
+}
+
+.btn-secondary:active {
+    transform: translateY(2px);
+}
