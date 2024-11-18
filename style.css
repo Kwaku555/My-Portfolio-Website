@@ -52,6 +52,19 @@
     box-sizing: border-box;
 }
 
+:root {
+    /* COLORS */
+    --BGCOLOR: #21252920;
+    --ALT-BGCOLOR: #f5f5f5;
+    --TEXT-COLOR: #000;
+    --ALT-TEXT-COLOR: #fff;
+    --BOX-SHADOW: 0px 2px 4px rgba(0, 0, 0, .1), 0px 8px 16px rgba(0, 0, 0, .1);
+
+
+
+
+}
+
 html {
     scroll-behavior:smooth;
     scroll-padding-top: 11rem;
@@ -60,8 +73,9 @@ html {
 
 body {
     font-family: "Poppins" , sans-serif;
-    color: black;
-    background-color: #21252920;
+    color: var(--TEXT-COLOR);
+    background-color: var(--BGCOLOR);
+    background-image: radial-gradient(var(--ALT-BGCOLOR),var(--BGCOLOR));
     
 }
 
@@ -113,24 +127,22 @@ a {
 
 header {
     height:70vh;
-    /* position: sticky;
-    top: 0; */
+    
+
+    
 
 }
-
 
 
 .nav-container {
     display: flex;
     padding: 1.2rem;
-    background-color: white;
+    background-color: var(--ALT-BGCOLOR);
+    position: sticky;
+    top: 0;
   
 
 }
-
-
-
-
 
 
 img {
@@ -142,8 +154,8 @@ img {
 }
 
 .profile-image {
-    /display: flex;
-   justify-content: flex-start;  
+    display: flex;
+    justify-content: flex-start;  
    
 }
 
@@ -206,7 +218,7 @@ img {
 
     .menu1.active {
         display: flex;
-        background-color: white;
+        background-color: var(--ALT-BGCOLOR);
         width: 100%;
         place-content: end;
         margin-top: 12px;
@@ -221,9 +233,9 @@ img {
         cursor: pointer;
         transition: transform 0.3s ease-in-out;
         padding: 0 10px 0 10px;
-        background-color: whitesmoke;
+        background-color: var(--ALT-BGCOLOR);
         border-radius: 20%;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, .1), 0px 8px 16px rgba(0, 0, 0, .1);
+        box-shadow: var(--BOX-SHADOW);
         
 
     }
@@ -234,7 +246,7 @@ img {
 
 .span1 {
     background-color: #9775fa;
-    color: white;
+    color: var(--ALT-TEXT-COLOR);
     border-radius: 4px;
     padding: 0.7rem;
 }
@@ -247,7 +259,7 @@ img {
 
 .hero-section p {
     padding: 2rem;
-    background-color: whitesmoke;
+    background-color: var(--ALT-BGCOLOR);
     border-radius: 10px;
 }
 
@@ -263,7 +275,7 @@ img {
     grid-template-areas :
     "cs1 cs1 cs1 cs1 cs1 cs2s cs2s cs2s cs2s";
     column-gap: 1.5rem;
-    background-color: #f5f5f5;
+    background-color: var(--ALT-BGCOLOR);
     margin: 0.8rem;
     padding: 90px 5px 90px 15px; 
     border-radius: 15px;
@@ -328,7 +340,7 @@ img {
     grid-template-columns: auto;
     grid-auto-flow: row;
     padding: 1rem;
-    background-color: #21252920;
+    background-color: var(--BGCOLOR);
     color: rebeccapurple;
     border-radius: 0.4rem;
     margin: 0;
@@ -381,15 +393,15 @@ ol {
      "fd fm sc fa"
      "fc fc fc fc";
     width: 100%;
-    background-color: #495057;
-    color: whitesmoke;
+    background-color: var(--BGCOLOR);
+    color: var(--ALT-TEXT-COLOR);
     min-height: 50vh;
     margin-top: 10px;
     padding-top: 2rem;
  }
 
  .footer-container h4 {
-    color: black;
+    color: var(--TEXT-COLOR);
  }
 
 .socialmedia-container li {
@@ -468,15 +480,14 @@ table,tr,th,td {
 .contact_form_section {
     display: grid;
     grid-template-columns: 1fr ;
-    background-color: whitesmoke;
+    background-color: var(--ALT-BGCOLOR);
     border: 2px solid #ccc;
     border-radius: 10px;
     max-width: 600px;
     margin: 0 auto;
     font-size: 1rem;
-    background-color: whitesmoke;
     margin-bottom: 50px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, .1), 0px 8px 16px rgba(0, 0, 0, .1);
+    box-shadow: var(--BOX-SHADOW);
 
 }
 
@@ -502,7 +513,7 @@ table,tr,th,td {
 
 #contact {
     padding: 2rem;
-    background-color: whitesmoke;
+    background-color: var(--ALT-BGCOLOR);
     background-image: url(images/contactUsBackgroundimage1.jpg);
     background-repeat: repeat;
     background-size: cover;
