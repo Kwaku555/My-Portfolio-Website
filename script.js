@@ -10,3 +10,8 @@ hamburgers.addEventListener('click',  () =>  {
         hamburger.innerHTML = '&#9776;'; // Change back to hamburger
     }
 });
+
+
+// document.write(new Date().getFullYear(year));
+
+document.getElementById('year').textContent = new Date().getFullYear();
